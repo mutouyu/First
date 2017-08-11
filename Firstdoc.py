@@ -1,4 +1,40 @@
+#This file is used to have a test on github
+#but now it doesn't work
+
+
 import sys
+import getpass
+from nssrc.com.citrix.netscaler.nitro.service.nitro_service import nitro_service 
+from nssrc.com.citrix.netscaler.nitro.exception.nitro_exception import nitro_exception
+from nssrc.com.citrix.netscaler.nitro.resource.stat.cs.csvserver_stats import csvserver_stats
+from nssrc.com.citrix.netscaler.nitro.resource.config.cs.cspolicy import cspolicy
+from nssrc.com.citrix.netscaler.nitro.resource.config.cs.csvserver import csvserver
+from nssrc.com.citrix.netscaler.nitro.resource.config.cs.csvserver_cspolicy_binding import csvserver_cspolicy_binding
+from nssrc.com.citrix.netscaler.nitro.resource.stat.lb.lbvserver_stats import lbvserver_stats
+from nssrc.com.citrix.netscaler.nitro.resource.config.lb.lbvserver_service_binding import lbvserver_service_binding
+#from nssrc.com.citrix.netscaler.nitro.resource.config.ns.nsversion import nsversion
+#from nssrc.com.citrix.netscaler.nitro.resource.config.lb.lbvserver import lbvserver
+#from nssrc.com.citrix.netscaler.nitro.resource.config.lb.lbvserver import lbvserver
+#from nssrc.com.citrix.netscaler.nitro.resource.stat.lb.lbvserver_stats import lbvserver_stats
+from nssrc.com.citrix.netscaler.nitro.resource.base.logout import logout
+
+class cs_get_stat:
+	def __init__(self):
+		_ip=""
+		_username=""
+		_password=""
+		_sessionid=""
+		# _IPAddress = input("Input ip address:")
+		# _UserName = input("Input your username:")
+		# _PassWord = getpass.getpass("Input your password:")
+
+	#@staticmethod
+	#def main(cls, args_):
+	def csvserver_method(cls,args_):
+		
+		#config = get_state()
+		# config.ip = IPAddress
+		# config.username = UserName
 		# config.password = PassWord
 		# if(len(args_) < 3):
 		# 	print("Usage:run.bat <ip> <username> <password>")
@@ -97,11 +133,10 @@ import sys
 					print("Name of Policy:" + result[i].policyname)
 					print
 					print("Policy URL:" + result[i].url)
-					print
 					# print("The Rule is :" + result[i].rule)
 					# print
 					print("This policy hit is :" + result[i].hits)
-					print
+					
 					print("****************************************")
 					
 		except nitro_exception as e :
